@@ -49,24 +49,24 @@ registerForm.addEventListener("submit", function (event) {
   if (!usernamePattern.test(usernameInput.value)) {
     message.style.color = "red";
     message.textContent =
-      "Пожалуйста, введите логин на английском языке, минимум 8 символов, максимум - 20";
+      "Please enter a password in English, minimum 8 characters, maximum 20";
     return;
   }
 
   if (!passwordPattern.test(passwordInput.value)) {
     message.style.color = "red";
     message.textContent =
-      "Пожалуйста, введите пароль на английском языке, минимум 8 символов, максимум - 20";
+      "Please enter a password in English, minimum 8 characters, maximum 20";
     return;
   }
 
   if (localStorage.getItem(usernameInput.value)) {
     message.style.color = "red";
-    message.textContent = "Пользователь с таким логином уже существует";
+    message.textContent = "User with this login already exists";
   } else {
     localStorage.setItem(usernameInput.value, passwordInput.value);
     message.style.color = "green";
-    message.textContent = "Регистрация успешна";
+    message.textContent = "Registration successfull";
   }
 
   usernameInput.value = "";
@@ -86,14 +86,14 @@ loginForm.addEventListener("submit", function (event) {
   if (!usernamePattern.test(usernameInput.value)) {
     message.style.color = "red";
     message.textContent =
-      "Пожалуйста, введите логин на английском языке, минимум 8 символов, максимум - 20";
+      "Please enter a password in English, minimum 8 characters, maximum 20";
     return;
   }
 
   if (!passwordPattern.test(passwordInput.value)) {
     message.style.color = "red";
     message.textContent =
-      "Пожалуйста, введите пароль на английском языке, минимум 8 символов, максимум - 20";
+      "Please enter a password in English, minimum 8 characters, maximum 20";
     return;
   }
 
@@ -102,7 +102,7 @@ loginForm.addEventListener("submit", function (event) {
     passwordInput.value === "Lorem13btc"
   ) {
     message.style.color = "green";
-    message.textContent = "Вход успешен";
+    message.textContent = "Login successfull";
 
     usernameInput.value = "";
     passwordInput.value = "";
@@ -112,7 +112,7 @@ loginForm.addEventListener("submit", function (event) {
     }, 3000);
   } else if (localStorage.getItem(usernameInput.value) === passwordInput.value) {
     message.style.color = "green";
-    message.textContent = "Вход успешен";
+    message.textContent = "Login successfull";
 
     usernameInput.value = "";
     passwordInput.value = "";
@@ -122,7 +122,7 @@ loginForm.addEventListener("submit", function (event) {
     }, 3000);
   } else {
     message.style.color = "red";
-    message.textContent = "Неверный логин или пароль";
+    message.textContent = "Incorrect login or password";
   }
 });
 
@@ -139,14 +139,14 @@ adminForm.addEventListener("submit", function (event) {
   if (!usernamePattern.test(usernameInput.value)) {
     message.style.color = "red";
     message.textContent =
-      "Пожалуйста, введите логин на английском языке, минимум 8 символов, максимум - 20";
+      "Please enter a password in English, minimum 8 characters, maximum 20";
     return;
   }
 
   if (!passwordPattern.test(passwordInput.value)) {
     message.style.color = "red";
     message.textContent =
-      "Пожалуйста, введите пароль на английском языке, минимум 8 символов, максимум - 20";
+      "Please enter a password in English, minimum 8 characters, maximum 20";
     return;
   }
 
@@ -155,7 +155,7 @@ adminForm.addEventListener("submit", function (event) {
     passwordInput.value === "Lorem13btc"
   ) {
     message.style.color = "green";
-    message.textContent = "Вход успешен";
+    message.textContent = "Login succesful";
 
     usernameInput.value = "";
     passwordInput.value = "";
@@ -165,7 +165,7 @@ adminForm.addEventListener("submit", function (event) {
     }, 3000);
   } else {
     message.style.color = "red";
-    message.textContent = "Неверный логин или пароль";
+    message.textContent = "Incorrect login or password";
   }
 });
 
