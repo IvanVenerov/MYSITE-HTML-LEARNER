@@ -1,12 +1,22 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Montserrat";
-  background-color: bisque;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: bisque;
+    /* Синий цвет фона */
+    background-image: radial-gradient(circle, #ff85ce 5%, transparent 50%);
+    /* Розовые высветления */
+    margin: 0;
+    /* Убираем отступы */
 }
 
 .popup {
@@ -136,6 +146,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
 }
 
 .icon-container img {

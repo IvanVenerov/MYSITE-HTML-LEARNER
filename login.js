@@ -175,6 +175,8 @@ function togglePasswordVisibility(inputId) {
     `#${inputId} + .show-password-button`
   );
 
+  event.preventDefault();
+
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
     showPasswordButton.textContent = "Hide password";
