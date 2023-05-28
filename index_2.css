@@ -1,0 +1,76 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    font-weight: 900;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td {
+    color: #555;
+}
+
+.delete-icon,
+.edit-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    opacity: 0.7;
+}
+
+.delete-icon {
+    background-image: url("delete-icon.png");
+}
+
+.edit-icon {
+    background-image: url("edit-icon.png");
+}
+
+.delete-icon:hover,
+.edit-icon:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.confirmation-button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.confirmation-button:hover {
+    background-color: darkred;
+}

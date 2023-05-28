@@ -1,0 +1,160 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+    /* Синий цвет фона */
+    background-image: radial-gradient(circle, #ff85ce 5%, transparent 50%);
+    /* Розовые высветления */
+    margin: 0;
+    /* Убираем отступы */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 600px;
+  background-color: plum;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup.open {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  width: 50%;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: bisque;
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+  margin-left: 100px;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.submit-button:hover {
+  background-color: red;
+}
+
+.action-button {
+  text-align: center;
+  background-color: plum;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-weight: 900;
+  margin-right: 50px;
+}
+
+#adminButton {
+  background-color: red;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+.show-password-button {
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 140px;
+  font-weight: 900;
+}
+.flag-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.icon-container img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 70px;
+}
+h1 {
+  font-weight: 900;
+  font-size: 50px;
+}

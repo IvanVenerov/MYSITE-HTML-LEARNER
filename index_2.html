@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="adminpanel.css">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/images/admin-panel-icon.png" />
+
+</head>
+
+<body>
+    <h1 data-lang="en" data-lang-en="Admin Panel" data-lang-ua="Панель адміністратора">
+        Admin Panel
+    </h1>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th data-lang="en" data-lang-en="Login" data-lang-ua="Логін">
+                    Login
+                </th>
+                <th data-lang="en" data-lang-en="Password" data-lang-ua="Пароль">
+                    Password
+                </th>
+                <th data-lang="en" data-lang-en="Action" data-lang-ua="Дія">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <img class="delete-icon" src="/images/delete-icon.png" alt="Delete"
+                        onclick="deleteUser('username')" />
+                    <img class="edit-icon" src="/images/edit-icon.png" alt="Edit" onclick="editUser('username')" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <img class="delete-icon" src="/images/delete-icon.png" alt="Delete"
+                        onclick="deleteUser('username')" />
+                    <img class="edit-icon" src="/images/edit-icon.png" alt="Edit" onclick="editUser('username')" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+    <script src="adminpanel.js"></script>
+</body>
+
+</html>
