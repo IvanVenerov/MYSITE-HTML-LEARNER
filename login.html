@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/images/frontend-icon.png" />
+</head>
+
+<body>
+    <div class="header">
+        <h1 data-lang="ua">Ласкаво просимо !</h1>
+        <h1 data-lang="en">Welcome !</h1>
+        <div class="icon-container">
+            <img class="flag-icon" src="/images/ukrainian-flag-icon.png" alt="Ukraine Flag"
+                onclick="changeLanguage('ua')" />
+            <img class="flag-icon" src="/images/uk-flag-icon.png" alt="UK Flag" onclick="changeLanguage('en')" />
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="registerButton" class="action-button" data-lang="ua"
+            data-lang-ua="Я хочу створити новий обліковий запис" data-lang-en="I want to create a new account">
+            Я хочу створити новий обліковий запис
+        </button>
+        <button id="loginButton" class="action-button" data-lang="ua" data-lang-ua="У мене вже є обліковий запис"
+            data-lang-en="I already have an account">
+            У мене вже є обліковий запис
+        </button>
+        <button id="adminButton" class="action-button" data-lang="ua" data-lang-ua="Увійти як адміністратор"
+            data-lang-en="Login as administrator">
+            Увійти як адміністратор
+        </button>
+    </div>
+    <div id="registerPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 style="font-weight: 900; font-size: 50px" data-lang="ua" data-lang-ua="Реєстрація"
+                data-lang-en="Registration">
+                Реєстрація
+            </h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="registerUsername" data-lang="ua" data-lang-ua="Ім'я користувача:"
+                        data-lang-en="Username:">Ім'я користувача:</label>
+                    <input type="text" id="registerUsername" minlength="8" required />
+                </div>
+                <div class="input-group">
+                    <label for="registerPassword" data-lang="ua" data-lang-ua="Пароль:"
+                        data-lang-en="Password:">Пароль:</label>
+                    <input type="password" id="registerPassword" minlength="8" required />
+                    <button class="show-password-button" onclick="togglePasswordVisibility('registerPassword')"
+                        data-lang="ua" data-lang-ua="Show password" data-lang-en="Show password">
+                        Show password
+                    </button>
+                </div>
+                <button type="submit" class="submit-button" data-lang="ua" data-lang-ua="Прийняти"
+                    data-lang-en="Submit">
+                    Submit
+                </button>
+            </form>
+            <p id="registerMessage" class="error-message"></p>
+        </div>
+    </div>
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 style="font-weight: 900; font-size: 50px" data-lang="ua" data-lang-ua="Вхід в обліковий запис"
+                data-lang-en="Account Login">
+                Вхід в обліковий запис
+            </h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="loginUsername" data-lang="ua" data-lang-ua="Ім'я користувача:"
+                        data-lang-en="Username:">Ім'я користувача:</label>
+                    <input type="text" id="loginUsername" minlength="8" required />
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword" data-lang="ua" data-lang-ua="Пароль:"
+                        data-lang-en="Password:">Пароль:</label>
+                    <input type="password" id="loginPassword" minlength="8" required />
+                </div>
+                <button type="submit" class="submit-button" data-lang="ua" data-lang-ua="Прийняти"
+                    data-lang-en="Submit">
+                    Принять
+                </button>
+            </form>
+            <p id="loginMessage" class="error-message"></p>
+        </div>
+    </div>
+
+    <div id="adminPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 style="font-weight: 900; font-size: 50px" data-lang="ua" data-lang-ua="Вхід як адміністратор"
+                data-lang-en="Login as administrator">
+                Вхід як адміністратор
+            </h2>
+            <form id="adminForm">
+                <div class="input-group">
+                    <label for="adminUsername" data-lang="ua" data-lang-ua="Ім'я користувача:"
+                        data-lang-en="Username:">Ім'я користувача:</label>
+                    <input type="text" id="adminUsername" minlength="8" required />
+                </div>
+                <div class="input-group">
+                    <label for="adminPassword" data-lang="ua" data-lang-ua="Пароль:"
+                        data-lang-en="Password:">Пароль:</label>
+                    <input type="password" id="adminPassword" minlength="8" required />
+                </div>
+                <button type="submit" class="submit-button" data-lang="ua" data-lang-ua="Прийняти"
+                    data-lang-en="Submit">
+                    Принять
+                </button>
+                <p id="adminMessage" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
